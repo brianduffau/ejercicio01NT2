@@ -23,3 +23,20 @@ function filtrar(num) {
         }
     })
 };
+
+function ordenAlfabetico () {
+    div.innerHTML = "";
+    let arrayRes = productos.slice().sort(function(a, b){
+        if (a.nombre > b.nombre) {
+            return 1;
+          }
+          if (a.nombre < b.nombre) {
+            return -1;
+          }
+          return 0;
+    });
+
+    arrayRes.forEach(prod => {
+        div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
+    })
+};
