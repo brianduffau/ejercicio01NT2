@@ -40,3 +40,15 @@ function ordenAlfabetico () {
         div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
     })
 };
+
+function ordenPrecio() {
+    div.innerHTML = "";
+    let arrayRes = productos.sort( (a, b) => {
+        return a.precio-b.precio;
+    });
+
+    arrayRes.forEach( prod => {
+        div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
+    });
+    
+};
