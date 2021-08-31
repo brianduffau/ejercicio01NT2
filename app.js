@@ -10,8 +10,14 @@ const productos = [
 
 function verTodos () {
     div.innerHTML = "";
+
     productos.forEach(prod => {
-    div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
+    //div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
+    let p = document.createElement('p');
+    var texto = document.createTextNode(prod.nombre + ', ' + prod.precio);
+    p.appendChild(texto);
+    div.appendChild(p);
+
     })
 };
 
@@ -19,7 +25,7 @@ function filtrar(num) {
     div.innerHTML = "";
     productos.forEach(prod => {
         if(prod.precio<=num){
-        div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
+        div.innerHTML += '<p>' + prod.nombre + ', ' + prod.precio + '</p>';
         }
     })
 };
@@ -37,7 +43,7 @@ function ordenAlfabetico () {
     });
 
     arrayRes.forEach(prod => {
-        div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
+        div.innerHTML += '<p>' + prod.nombre + ', ' + prod.precio + '</p>';
     })
 };
 
@@ -48,7 +54,7 @@ function ordenPrecio() {
     });
 
     arrayRes.forEach( prod => {
-        div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
+        div.innerHTML += '<p>' + prod.nombre + ', ' + prod.precio + '</p>';
     });
     
 };
