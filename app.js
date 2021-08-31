@@ -14,3 +14,12 @@ function verTodos () {
     div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
     })
 };
+
+function filtrar(num) {
+    div.innerHTML = "";
+    productos.forEach(prod => {
+        if(prod.precio<=num){
+        div.innerHTML += '<p>' + prod.nombre + ' ' + prod.precio + '</p>';
+        }
+    })
+};
