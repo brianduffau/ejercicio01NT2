@@ -6,6 +6,7 @@ const productos = [
     {nombre: 'sandia', precio:350},
     {nombre: 'frutilla', precio:180},
     {nombre: 'palta', precio:250}
+    {nombre: 'papa', precio:120}
 ]
 
 function verTodos () {
