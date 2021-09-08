@@ -5,8 +5,9 @@ const productos = [
     {nombre: 'manzana', precio:100},
     {nombre: 'sandia', precio:350},
     {nombre: 'frutilla', precio:180},
-    {nombre: 'palta', precio:250}
-    {nombre: 'papa', precio:120}
+    {nombre: 'palta', precio:250},
+    {nombre: 'papa', precio:120},
+    {nombre: 'cebolla', precio:360}
 ]
 
 function verTodos () {
