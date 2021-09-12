@@ -52,7 +52,7 @@ function ordenAlfabetico () {
 function ordenPrecio() {
     div.innerHTML = "";
     let arrayRes = productos.sort( (a, b) => {
-        return a.precio-b.precio;
+        return b.precio-a.precio;
     });
 
     arrayRes.forEach( prod => {
